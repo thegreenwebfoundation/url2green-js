@@ -1,0 +1,50 @@
+{
+  "name": "@tgwf/url2green",
+  "version": "0.0.1",
+  "description": "An npm module for quickly checking a domain against the The Green Web Foundation url2green dataset",
+  "main": "src/index.js",
+  "np": {
+    "yarn": false
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "better-sqlite3": "^5.4.3",
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "np": "^6.2.0",
+    "eslint": "6.8.0",
+    "prettier": "1.19.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-jest": "23.8.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "travis": "npm run lint && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thegreenwebfoundation/url2green-js.git"
+  },
+  "keywords": [
+    "sustainability",
+    "carbon",
+    "the",
+    "green",
+    "web",
+    "foundation",
+    "co2"
+  ],
+  "author": "Chris Adams",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/thegreenwebfoundation/url2green-js/issues"
+  },
+  "homepage": "https://github.com/thegreenwebfoundation/url2green-js#readme"
+}
