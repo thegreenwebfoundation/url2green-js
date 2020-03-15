@@ -104,5 +104,5 @@ dist
 .tern-port
 
 
-data/url2green.db
-data/url2green.json
+url2green.json
+url2green.db
