@@ -38,15 +38,37 @@ hostingDB.check(["google.com", "kochindustries.com"], "path/to/database.db");
 
 ## Fetching the latest copy of the url2green dataset
 
-You can fetch the most recent copy of the url2green dataset from:
+By default, the url2green module includes a recent copy of the url2green dataset, and is accessible at `data/url2green.db`.
+
+You can generate a simple JSON list of the domains to check against, with `dumpDomains`.
+
+
+```js
+const hostingDB = require('@tgwf/hosting-database');
+
+hostingDB.dumpDomains("path/to/database.db", "path/to/output.json");
+```
+
+In cases where you don't want to rely on SQLite, this will generate a JSON file that allows you to perform the same lookups, using the `@tgwf/co2` module.
+
+
+### Fetching updated snpashots from the Green Web Foundation
+
+You can fetch the most recent copy of the url2green dataset from The Green Web Foundation.
 
 https://www.thegreenwebfoundation.org/green-web-datasets/
 
 
 ## Licensing
 
-The code is licensed Apache 2.0.
+We encourage the use of this in tooling and services, where you might rely on the [Green Web Foundation Greencheck API][api] - this helps with managing load on our servers, and we hope it will enable uses we haven't thought of yet. If you have questions, please file an issue
 
-The dataset
+The code is licensed under the [Apache 2.0 license][apache-2.0].
+
+The dataset is provided under the [Open Database License][odbl]
+
+[api]: https://.thegreenwebfoundation.org/
+[apache-2.0]: https://www.apache.org/licenses/LICENSE-2.0.html
+[odbl]: https://opendatacommons.org/licenses/odbl/summary/index.html
 
 
