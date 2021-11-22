@@ -43,7 +43,7 @@ function check(domain, dbName) {
 
 function checkInDB(domain, db) {
   try {
-    const stmt = db.prepare("SELECT * FROM green_presenting WHERE url = ?");
+    const stmt = db.prepare("SELECT * FROM greendomain WHERE url = ?");
     return !!stmt.get(domain).green;
   } finally {
     if (db) {
@@ -66,7 +66,7 @@ function greenDomainsFromResults(greenResults) {
 function checkDomainsInDB(domains, db) {
   try {
     const stmt = db.prepare(
-      `SELECT * FROM green_presenting WHERE url in (${getQ(domains)})`
+      `SELECT * FROM greendomain WHERE url in (${getQ(domains)})`
     );
 
     const res = stmt.all(domains);
@@ -87,7 +87,7 @@ async function dumpDomains(dbName, filePath) {
   };
 
   try {
-    const stmt = db.prepare("SELECT url FROM green_presenting");
+    const stmt = db.prepare("SELECT url FROM greendomain");
 
     const res = stmt.all();
 
