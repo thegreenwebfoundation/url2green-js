@@ -52,7 +52,7 @@ hostingDB.dumpDomains("path/to/database.db", "path/to/output.json");
 In cases where you don't want to rely on SQLite, this will generate a JSON file that allows you to perform the same lookups, using the `@tgwf/co2` module.
 
 
-### Fetching updated snpashots from the Green Web Foundation
+### Fetching updated snapshots from the Green Web Foundation
 
 You can fetch the most recent copy of the url2green dataset from The Green Web Foundation.
 
