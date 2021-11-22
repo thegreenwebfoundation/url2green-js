@@ -8,5 +8,5 @@ function check(domain, dbName) {
 }
 
 module.exports = {
-  check
+  check,
 };

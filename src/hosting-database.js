@@ -19,7 +19,7 @@ function getDatabase(databaseFullPathAndName) {
   log(`looking for db at ${databaseFullPathAndName}`);
   return new Database(databaseFullPathAndName, {
     readonly: true,
-    fileMustExist: true
+    fileMustExist: true,
   });
 }
 
@@ -54,11 +54,11 @@ function checkInDB(domain, db) {
 
 function greenDomainsFromResults(greenResults) {
   const entries = Object.entries(greenResults);
-  let greenEntries = entries.filter(function([key, val]) {
+  let greenEntries = entries.filter(function ([key, val]) {
     return val.green;
   });
 
-  return greenEntries.map(function([key, val]) {
+  return greenEntries.map(function ([key, val]) {
     return val.url;
   });
 }
@@ -82,7 +82,7 @@ function checkDomainsInDB(domains, db) {
 async function dumpDomains(dbName, filePath) {
   const db = getDatabase(dbName);
 
-  const justThedomains = function(row) {
+  const justThedomains = function (row) {
     return row.url;
   };
 
@@ -101,5 +101,5 @@ async function dumpDomains(dbName, filePath) {
 }
 module.exports = {
   check,
-  dumpDomains
+  dumpDomains,
 };
