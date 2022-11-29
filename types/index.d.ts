@@ -1,5 +1,5 @@
 
 
 export namespace hosting {
-  function check(domain: string, dbName?: string) : boolean;
+  function check(domain: string | string[], dbName: string): boolean | string[];
 }
