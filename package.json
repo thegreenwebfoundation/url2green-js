@@ -9,6 +9,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "better-sqlite3": "^7.4.5",
     "debug": "^4.1.1"
