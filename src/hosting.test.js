@@ -1,16 +1,14 @@
 "use strict";
 
-const fs = require("fs");
-const path = require("path");
-
-const hosting = require("./hosting");
+import path from "path";
+import hosting from "./hosting";
 
 const dbPath = path.resolve(
   __dirname,
   "..",
   "data",
   "fixtures",
-  "url2green.test.db"
+  "url2green.test.db",
 );
 
 describe("hosting", function () {
@@ -24,7 +22,7 @@ describe("hosting", function () {
     it("tries to use a local database if available", async function () {
       const res = await hosting.check(
         ["google.com", "kochindustries.com"],
-        dbPath
+        dbPath,
       );
       expect(res).toContain("google.com");
     });
@@ -33,7 +31,7 @@ describe("hosting", function () {
     it("tries to use a local database if available", async function () {
       const res = await hosting.check(
         ["google.com", "kochindustries.com"],
-        dbPath
+        dbPath,
       );
       expect(res).toContain("google.com");
     });

@@ -1,10 +1,11 @@
 "use strict";
 
-const log = require("debug")("tgwf:hostingDatabase");
-const Database = require("better-sqlite3");
-const fs = require("fs");
-const { promisify } = require("util");
-const readFile = promisify(fs.readFile);
+import debug from "debug";
+import Database from "better-sqlite3";
+import fs from "fs";
+import { promisify } from "util";
+
+const log = debug("tgwf:hostingDatabase");
 const writeFile = promisify(fs.writeFile);
 
 function getQ(domains) {
@@ -66,7 +67,7 @@ function greenDomainsFromResults(greenResults) {
 function checkDomainsInDB(domains, db) {
   try {
     const stmt = db.prepare(
-      `SELECT * FROM greendomain WHERE url in (${getQ(domains)})`
+      `SELECT * FROM greendomain WHERE url in (${getQ(domains)})`,
     );
 
     const res = stmt.all(domains);
@@ -99,7 +100,8 @@ async function dumpDomains(dbName, filePath) {
     }
   }
 }
-module.exports = {
+
+export default {
   check,
   dumpDomains,
 };

@@ -1,12 +1,9 @@
 "use strict";
 
-const log = require("debug")("tgwf:hosting");
-const hostingDatabase = require("./hosting-database");
+import hostingDatabase from "./hosting-database";
 
 function check(domain, dbName) {
   return hostingDatabase.check(domain, dbName);
 }
 
-module.exports = {
-  check,
-};
+export default { check };
