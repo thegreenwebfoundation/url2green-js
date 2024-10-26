@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "An npm module for quickly checking a domain against the The Green Web Foundation url2green dataset",
   "main": "src/index.js",
+  "type": "module",
   "np": {
     "yarn": false
   },
@@ -13,17 +14,19 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "better-sqlite3": "^8.5.0",
-    "debug": "^4.1.1"
+    "better-sqlite3": "^11.5.0",
+    "debug": "^4.1.1",
+    "esbuild": "^0.24.0",
+    "esbuild-jest": "^0.5.0"
   },
   "devDependencies": {
-    "eslint": "^8.3.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^25.2.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.3.1",
-    "np": "^7.6.0",
-    "prettier": "^2.4.1"
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-prettier": "*",
+    "jest": "*",
+    "np": "*",
+    "prettier": "*"
   },
   "scripts": {
     "test": "jest",
@@ -32,6 +35,13 @@
     "ci": "npm run lint && jest",
     "release": "npm run lint:fix && np minor",
     "db:dump-domains": "./scripts/generate-json-from-db.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": [
+        "esbuild-jest"
+      ]
+    }
   },
   "repository": {
     "type": "git",

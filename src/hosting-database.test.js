@@ -1,13 +1,10 @@
 "use strict";
 
-const log = require("debug")("tgwf:url2green:test");
-const hosting = require("./hosting-database");
-const path = require("path");
-const fs = require("fs");
-const { promisify } = require("util");
+import hosting from "./hosting-database";
+import path from "path";
+import fs from "fs";
+import { promisify } from "util";
 const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
-const unlink = promisify(fs.unlink);
 
 describe("hostingDatabase", function () {
   const jsonPath = path.resolve(__dirname, "..", "url2green.test.json");
