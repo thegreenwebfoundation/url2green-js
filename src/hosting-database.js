@@ -67,7 +67,7 @@ function greenDomainsFromResults(greenResults) {
 function checkDomainsInDB(domains, db) {
   try {
     const stmt = db.prepare(
-      `SELECT * FROM greendomain WHERE url in (${getQ(domains)})`
+      `SELECT * FROM greendomain WHERE url in (${getQ(domains)})`,
     );
 
     const res = stmt.all(domains);
