@@ -8,7 +8,7 @@ const dbPath = path.resolve(
   "..",
   "data",
   "fixtures",
-  "url2green.test.db"
+  "url2green.test.db",
 );
 
 describe("hosting", function () {
@@ -22,7 +22,7 @@ describe("hosting", function () {
     it("tries to use a local database if available", async function () {
       const res = await hosting.check(
         ["google.com", "kochindustries.com"],
-        dbPath
+        dbPath,
       );
       expect(res).toContain("google.com");
     });
@@ -31,7 +31,7 @@ describe("hosting", function () {
     it("tries to use a local database if available", async function () {
       const res = await hosting.check(
         ["google.com", "kochindustries.com"],
-        dbPath
+        dbPath,
       );
       expect(res).toContain("google.com");
     });
