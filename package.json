@@ -22,7 +22,7 @@
     "eslint-plugin-jest": "^25.2.4",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.3.1",
-    "np": "^7.6.0",
+    "np": "^10.0.0",
     "prettier": "^2.4.1"
   },
   "scripts": {
@@ -31,6 +31,7 @@
     "lint:fix": "eslint . --fix",
     "ci": "npm run lint && jest",
     "release": "npm run lint:fix && np minor",
+    "release:patch": "npm run lint:fix && np patch",
     "db:dump-domains": "./scripts/generate-json-from-db.js"
   },
   "repository": {
