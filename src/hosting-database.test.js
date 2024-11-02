@@ -16,7 +16,7 @@ describe("hostingDatabase", function () {
     "..",
     "data",
     "fixtures",
-    "url2green.test.db",
+    "url2green.test.db"
   );
 
   describe("generating a dump of green domains #dump", function () {
@@ -46,7 +46,7 @@ describe("hostingDatabase", function () {
     test("tries to use a local database if available", async function () {
       const res = await hosting.check(
         ["google.com", "kochindustries.com"],
-        dbPath,
+        dbPath
       );
       expect(res).toContain("google.com");
     });
