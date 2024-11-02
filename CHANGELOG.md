@@ -8,6 +8,8 @@ and this project adheres to
 
 ## Unreleased
 
+## [0.4.1]
+
 - Update `better-sqlite3` to new version, to fix compile issues on arm machines
 
 ## [0.4.0]
