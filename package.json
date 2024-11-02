@@ -3,6 +3,7 @@
   "version": "0.4.1",
   "description": "An npm module for quickly checking a domain against the The Green Web Foundation url2green dataset",
   "main": "src/index.js",
+  "type": "module",
   "np": {
     "yarn": false
   },
@@ -25,6 +26,7 @@
     "np": "^10.0.0",
     "prettier": "^2.4.1"
   },
+  },
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
@@ -33,6 +35,13 @@
     "release": "npm run lint:fix && np minor",
     "release:patch": "npm run lint:fix && np patch",
     "db:dump-domains": "./scripts/generate-json-from-db.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": [
+        "esbuild-jest"
+      ]
+    }
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,7 @@
 "use strict";
 
-const fs = require("fs");
-const path = require("path");
-
-const hosting = require("./hosting");
+import path from "path";
+import hosting from "./hosting";
 
 const dbPath = path.resolve(
   __dirname,
