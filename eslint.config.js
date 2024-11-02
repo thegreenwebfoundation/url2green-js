@@ -33,7 +33,7 @@ export default [
     },
 
     rules: {
-      "prettier/prettier": ["error", {}],
+      "prettier/prettier": ["error", { trailingComma: "all" }],
       "no-unused-vars": "off",
     },
   },

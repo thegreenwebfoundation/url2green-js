@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 import { promisify } from "util";
 const readFile = promisify(fs.readFile);
+const unlink = promisify(fs.unlink);
 
 describe("hostingDatabase", function () {
   const jsonPath = path.resolve(__dirname, "..", "url2green.test.json");
