@@ -1,6 +1,6 @@
 {
   "name": "@tgwf/url2green",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "An npm module for quickly checking a domain against the The Green Web Foundation url2green dataset",
   "main": "src/index.js",
   "np": {
