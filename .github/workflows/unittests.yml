@@ -5,9 +5,9 @@ on:
       - main
       - master
   pull_request:
-    branches:
-      - main
-      - master
+# branches:
+#   - main
+#   - master
 jobs:
   build:
     runs-on: ubuntu-latest
