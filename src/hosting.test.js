@@ -2,6 +2,8 @@
 
 import path from "path";
 import hosting from "./hosting";
+import { describe, expect, it, test } from "vitest";
+import { afterAll } from "vitest";
 
 const dbPath = path.resolve(
   __dirname,
