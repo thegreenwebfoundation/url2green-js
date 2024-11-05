@@ -32,7 +32,8 @@
     "vitest": "^2.1.4"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "vitest run",
+    "test:dev": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "ci": "npm run lint && jest",
