@@ -7,6 +7,9 @@ import { promisify } from "util";
 const readFile = promisify(fs.readFile);
 const unlink = promisify(fs.unlink);
 
+import { describe, expect, test } from "vitest";
+import { afterAll } from "vitest";
+
 describe("hostingDatabase", function () {
   const jsonPath = path.resolve(__dirname, "..", "url2green.test.json");
   const dbPath = path.resolve(

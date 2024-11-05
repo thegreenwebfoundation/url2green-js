@@ -28,10 +28,12 @@
     "globals": "^15.11.0",
     "jest": "*",
     "np": "*",
-    "prettier": "*"
+    "prettier": "*",
+    "vitest": "^2.1.4"
   },
   "scripts": {
-    "test": "jest",
+    "test": "vitest run",
+    "test:dev": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "ci": "npm run lint && jest",
