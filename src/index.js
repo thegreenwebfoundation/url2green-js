@@ -1,5 +1,3 @@
-const hosting = require("./hosting");
+import hosting from "./hosting";
 
-module.exports = {
-  hosting,
-};
+export default { hosting };

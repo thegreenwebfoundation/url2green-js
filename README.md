@@ -7,13 +7,13 @@ Normally you can check domain against the The Green Web Foundation url2green dat
 
 ```js
 
-const greencheck = require('@tgwf/hosting')
+import greencheck from "@tgwf/hosting"
 
 // returns true if green, otherwise false
-greencheck.check("google.com")
+await greencheck.check("google.com")
 
 // returns an array of the green domains, in this case ["google"].
-greencheck.check(["google.com", "kochindustries.com"])"]
+await  greencheck.check(["google.com", "kochindustries.com"])"]
 ```
 
 ## Usage
@@ -27,13 +27,13 @@ To do so, install this module with `npm install @tgwf/url2green`. You can then u
 
 ```js
 
-const hostingDB = require('@tgwf/hosting-database');
+import hostingDB from "@tgwf/hosting-database"
 
 // returns true if green, otherwise false
-hostingDB.check("google.com", "path/to/database.db");
+await hostingDB.check("google.com", "path/to/database.db");
 
 // returns an array of the green domains, in this case ["google.
-hostingDB.check(["google.com", "kochindustries.com"], "path/to/database.db");
+await hostingDB.check(["google.com", "kochindustries.com"], "path/to/database.db");
 ```
 
 ## Fetching the latest copy of the url2green dataset
@@ -44,9 +44,9 @@ You can generate a simple JSON list of the domains to check against, with `dumpD
 
 
 ```js
-const hostingDB = require('@tgwf/hosting-database');
+import hostingDB from "@tgwf/hosting-database"
 
-hostingDB.dumpDomains("path/to/database.db", "path/to/output.json");
+await hostingDB.dumpDomains("path/to/database.db", "path/to/output.json");
 ```
 
 In cases where you don't want to rely on SQLite, this will generate a JSON file that allows you to perform the same lookups, using the `@tgwf/co2` module.

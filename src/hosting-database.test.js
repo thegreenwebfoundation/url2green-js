@@ -1,12 +1,10 @@
 "use strict";
 
-const log = require("debug")("tgwf:url2green:test");
-const hosting = require("./hosting-database");
-const path = require("path");
-const fs = require("fs");
-const { promisify } = require("util");
+import hosting from "./hosting-database";
+import path from "path";
+import fs from "fs";
+import { promisify } from "util";
 const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
 const unlink = promisify(fs.unlink);
 
 describe("hostingDatabase", function () {
@@ -16,7 +14,7 @@ describe("hostingDatabase", function () {
     "..",
     "data",
     "fixtures",
-    "url2green.test.db"
+    "url2green.test.db",
   );
 
   describe("generating a dump of green domains #dump", function () {
@@ -46,7 +44,7 @@ describe("hostingDatabase", function () {
     test("tries to use a local database if available", async function () {
       const res = await hosting.check(
         ["google.com", "kochindustries.com"],
-        dbPath
+        dbPath,
       );
       expect(res).toContain("google.com");
     });
