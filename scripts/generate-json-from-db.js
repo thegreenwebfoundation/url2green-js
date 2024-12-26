@@ -2,9 +2,11 @@
 
 /*eslint no-console: 0*/
 
-const path = require("path");
+import path from "path";
+import { fileURLToPath } from "url";
+import hostingDB from "../src/hosting-database.js";
 
-const hostingDB = require("../src/hosting-database");
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const dbPath = path.resolve(__dirname, "..", "data", "url2green.db");
 
